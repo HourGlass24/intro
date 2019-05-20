@@ -33,6 +33,15 @@ head(mtcars) # melihat 6 baris pertama dari data mtcars, mtcars adalah data bawa
 
 Jika ingin menjalankan kode R dalam *chunck* tersebut, Anda dapat menggunakan pemintas Ctrl + Enter (menjalankan satu baris kode) atau Ctrl + Shift + Enter (menjalankan semua kode dalam *chunck*). Sekarang buatlah *chunck* baru yang isinya adalah baris kode R berikut: (Petunjuk: Gunakan Ctrl + Alt + I)
 
+```{r}
+
+filled.contour(volcano,
+               color.palette = terrain.colors, 
+               plot.title = title("Topografi Gunung Maunga Whau"), 
+               key.title = title("Tinggi\n(meter)"))
+```
+
+
 filled.contour(volcano,
                color.palette = terrain.colors, 
                plot.title = title("Topografi Gunung Maunga Whau"), 
@@ -67,10 +76,10 @@ huruf_vokal # mencetak objek data dengan nama 'huruf_vokal' pada konsol
 Jenis dari data dapat diketahui dengan menggunakan fungsi `typeof()`. Dapatkah Anda mengetahui jenis data dari 'huruf_vokal' diatas? Bagaimana jika Anda membuat objek data dengan menggunakan fungsi `c()` namun jenis elemennya berbeda-beda? Dapatkah Anda menjelaskannya? Isilah '___' dengan jawaban yang sesuai!
 
 ```{r}
-___(huruf_vokal)
+typeof(huruf_vokal)
 
 beragam <- c(2.7, "berbeda", TRUE, 4L) # 2.7 bertipe double, "berbeda" bertipe character, TRUE bertipe logical, 4L bertipe integer
-typeof(___) # cek tipe dari objek data dengan nama 'beragam'
+typeof(beragam) # cek tipe dari objek data dengan nama 'beragam'
 ```
 
 Struktur data dua dimensi merupakan yang paling banyak digunakan di R, yaitu matrix dan dataframe yang dapat dibuat dengan menggunakan fungsi `matrix()` dan `data.frame()`. Kedua data tersebut umumnya jarang dibuat secara langsung di R, notabene berasal dari berkas luar atau merupakan hasil dari penggunaan fungsi. Prinsipnya suatu dataframe merupakan gabungan dari beberapa data satu dimensi dengan jumlah yang sama, umumnya adalah *atomic vectors*. Menurut Anda, dapatkah suatu frame tersusun atas beberapa *list* dengan jumlah yang sama?
@@ -82,31 +91,31 @@ Fungsi memiliki tugas utama untuk mengolah suatu *input* menjadi *output*. Anda 
 
 ```{r}
 iris # mencetak data di konsol
-dim(iris) # ___
-str(iris) # ___
-colnames(iris) # ___
-head(iris) # ___
-head(iris, 10) # ___
-tail(iris) # ___
-tail(iris, 10) # ___
-summary(iris) # ___
+dim(iris) # Mengecek dimensi dari data
+str(iris) # Mengecek struktur datri data
+colnames(iris) # Mengecek name colom
+head(iris) # Mengecek data teratas
+head(iris, 10) # Mengecek 10 data teratas
+tail(iris) # Mengecek data terakhir
+tail(iris, 10) # Mengecek 10 data terakhir
+summary(iris) # Mengecek rangkuman data
 iris[1, ] # subset data pada baris 1
-iris[c(1, 6, 12),] # ___
+iris[c(1, 6, 12),] # Mencetak Barus 1 6 12
 iris[ ,2] # subset atau ekstrak data pada kolom 2
-iris[2,2] # ___
+iris[2,2] # subset atau ekstrak data pada kolom 2 baris 2
 iris$Sepal.Length # ekstrak data pada kolom 'Sepal.Length'
-class(iris$Species) # ___
-length(iris$Petal.Width) # ___
-levels(iris$Species) # ___
-length(levels(iris$Species)) # ___
-unique(iris$Species) # ___
+class(iris$Species) # Mencetak class data
+length(iris$Petal.Width) # Banyak data pada kolim tertentu
+levels(iris$Species) # Mencetak atribut
+length(levels(iris$Species)) # 
+unique(iris$Species) # Vector berupa number, 
 length(unique(iris$Species)) # ___
-mean(iris$Sepal.Length) # ___
-sd(iris$Sepal.Length) # ___
-median(iris$Sepal.Width) # ___
-sum(iris$Petal.Length) # ___
-plot(iris) # ___
-cor(iris[, -5]) # ___
+mean(iris$Sepal.Length) # Mencari Mean
+sd(iris$Sepal.Length) # Mencari Standar Deviasi
+median(iris$Sepal.Width) # Mencari Median
+sum(iris$Petal.Length) # Mencari Sum
+plot(iris) # Menampilkan Plot
+cor(iris[, -5]) # Mencari korelasi
 write.csv(iris, file = "iris.csv", row.names = FALSE) # ___
 ```
 
