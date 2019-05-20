@@ -75,6 +75,11 @@ Dataset mydata tersebut merupakan subset dataset Tubercolusis yang diolah dari d
 ```{r}
 glimpse(who)
 glimpse(population)
+str(population)
+summary(population)
+population %>%
+  distinct(country)
+population
 ```
 
 Sekarang kita akan membuat versi utuh dari dataset 'mydata' dengan menggunakan data seluruh negara pada dataset 'who' sebagai berikut:
