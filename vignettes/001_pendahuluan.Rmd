@@ -3,12 +3,13 @@ title: "Pendahuluan"
 author: "Muhammad Aswan Syahputra"
 date: "4/9/2019"
 output:
+  github_document
+  word_document
   html_document: 
     df_print: default
     fig_height: 6
     fig_width: 9
     highlight: textmate
-    keep_md: yes
     theme: yeti
     toc: yes
     toc_collapsed: yes
@@ -108,7 +109,7 @@ class(iris$Species) # Mencetak class data
 length(iris$Petal.Width) # Banyak data pada kolim tertentu
 levels(iris$Species) # Mencetak atribut
 length(levels(iris$Species)) # 
-unique(iris$Species) # Vector berupa number, 
+unique(iris$Species) # Vector berupa number
 length(unique(iris$Species)) # ___
 mean(iris$Sepal.Length) # Mencari Mean
 sd(iris$Sepal.Length) # Mencari Standar Deviasi
@@ -116,7 +117,7 @@ median(iris$Sepal.Width) # Mencari Median
 sum(iris$Petal.Length) # Mencari Sum
 plot(iris) # Menampilkan Plot
 cor(iris[, -5]) # Mencari korelasi
-write.csv(iris, file = "iris.csv", row.names = FALSE) # ___
+write.csv(iris, file = "iris1.csv", row.names = FALSE) # menyimpan file
 ```
 
 Dari catatan ringkas mengenai fungsi-fungsi di atas, dapatkah Anda menebak mana fungsi yang berjenis '*changing the environment*' dan mana yang berjenis '*calculating value*'?
